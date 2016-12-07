@@ -1,49 +1,82 @@
-body {
-      padding: 25px;
-      font-family: helvetica, sans-serif;
+body, html
+{
+	background-color: #B0C4DE
+ !important;
 }
 
-.pure-g {
-      border: 5px solid orange;
-      margin-bottom: 25px;
+.intro
+{
+	text-align: center;
+	padding-top: 13%;
+	padding-bottom: 13%;
+	margin-bottom: 50px;
+  background-image: url("https://scontent-bru2-1.xx.fbcdn.net/v/t1.0-9/13406815_1399119740114933_1898166086309409816_n.jpg?oh=3d9573d7303d8d64ea9af9b6fc5648e7&oe=58F3C1FF");
+background-size: 100%;
 }
 
-.pure-u-1 {
-      box-sizing: border-box;
-      border: 5px solid cadetblue;
-      padding: 25px;
-      text-align: center;
-}
 
-h1 {
-      font-size: 1.2em;
-      font-weight: 900;
-}
+.container {
+  border: 1px solid #fff;
 
-h2 {
-      font-size: 1.1em;
-      font-weight: 900;
-      margin-bottom: 25px;
-}
+  ul {
+    display: block;
+    float: left;
+    width: 100%;
+  }
 
-p {
-      margin-bottom: 25px;
-      text-align: left;
-      line-height: 1.6em;
-}
+  li {
+    box-sizing: border-box;
+    display: block;
+    float: left;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 33.3%;
+    width: 33.3%;
 
-ul {
-      list-style-type: none;
-      padding: 0;
-}
+    background-color: #000;
+    border: 2px solid #fff;
 
-@media (max-width: 48em) {
-      li a {
-            color: red;
+    &:hover {
+      h3 {
+        opacity: 1;
+        transition: all .3s ease-in-out .1s;
       }
-
-      li {
-            display: inline;
-            margin-right: 10px;
+      img {
+        opacity: 1;
+        transform: scale(1);
       }
+    }
+
+    h3 {
+      position: absolute;
+      left: 0px;
+      min-height: 3em;
+      padding: 15px;
+      right: 0px;
+      top: 0px;
+      z-index: 10;
+
+      background: linear-gradient(180deg, rgba(0, 0, 0, .65), rgba(0, 0, 0, 0));
+      color: #fff;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 1.5em;
+      opacity: 0;
+      transition: all .3s ease-in-out;
+}
+
+    img {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      max-height: 110%;
+      max-width: 110%;
+      opacity: .7;
+      right: 0;
+      top: 0;
+      transform: scale(1.1);
+      transition: all .3s ease-in-out;
+      z-index: 0;
+    }
+  }
 }
